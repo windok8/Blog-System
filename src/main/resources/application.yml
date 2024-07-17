@@ -1,0 +1,13 @@
+spring:
+  port: 8080
+  datasource:
+    url: jdbc:mysql://localhost:3306/blog
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+
+
+jwt:
+  secret: U3ByaW5nQm9vdOWNmuWuouezu+e7n+S7o+eggemimA==
+  expiration: 86400000
