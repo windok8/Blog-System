@@ -52,7 +52,7 @@ public class AuthController {
         if (user == null) {
             return Result.error(ResultStatusEnum.USER_NOT_FOUND.getCode(), ResultStatusEnum.USER_NOT_FOUND.getValue());
         }
-        if (!PasswordUtil.checkPassword(authDto.getPassword(),user.getUsername(),user.getPassword())){
+        if (!PasswordUtil.checkPassword(authDto.getPassword(),user.getEmail(),user.getPassword())){
             return Result.error(ResultStatusEnum.FAIL.getCode(), "密码错误");
         }
         String jwt = jwtUtils.greateToken(user);
